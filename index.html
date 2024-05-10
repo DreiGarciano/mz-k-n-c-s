@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mz k n c s</title>
+    <style>
+        .button-container {
+            margin-right: 10%;
+        }
+
+
+        .button {
+            width: 150px;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px; /* Optional: Add some spacing between buttons */
+            position: relative;
+            background: #ffdfdd;
+            border-radius: 15px;
+            border: none;
+        }
+
+        #stayingButton {
+            position: absolute;
+        }
+
+        img {
+            margin-left: 4%;
+            height: 275px;
+            width: 200px;
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="button-container">
+    <h1 id="text">You are more than enough</h1>
+    <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWN2c2NsZjJyczAxaGs5bjd3N200ZmppdHk5amY1MW1ocWpweWNzNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PxqXdxK85QWmk/giphy.gif">
+    <br>
+    <button id="movingButton" class="button" onclick="button1()">Yes</button>
+    <button id="stayingButton" class="button" onmouseover="moveButton('stayingButton')">No</button>
+</div>
+
+<script>
+    function moveButton(buttonId) {
+        var button = document.getElementById(buttonId);
+        var maxX = window.innerWidth - button.clientWidth;
+        var maxY = window.innerHeight - button.clientHeight;
+
+        // Move the button randomly
+        var randomX = Math.floor(Math.random() * maxX);
+        var randomY = Math.floor(Math.random() * maxY);
+
+        button.style.left = randomX + "px";
+        button.style.top = randomY + "px";
+    }
+
+    function button1() {  
+        var name = prompt("What should i call you?");
+        alert(name + " kumusta ka?");
+        alert("gusto ko lang sabihin sa iyo kung gaano ka kahanga-hanga.");
+        alert(name + " alam kong ginagawa mo yung best mo at ako'y proud sa'yo");
+        alert(name + " always remember na meron kang #1 fan which is me hehe");
+        alert(name + " magpahinga ka rin dahil you deserve it, after all you been through a lot na kaya magpahinga ka na muna");
+        alert("and always remember na hindi ka nagiisa nandito ako palagi para suportahan at samahan ka <3");
+    }
+</script>
+
+</body>
+</html>
